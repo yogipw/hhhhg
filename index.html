@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <title>Responsive Slide</title>
+</head>
+<body>
+    <div class="flex h-screen bg-gray-100">
+        <div class="m-auto bg-white rounded-lg shadow-md p-8 w-4/5">
+            <h1 class="text-2xl font-bold mb-4">Keamanan Digital</h1>
+            <p class="mb-8">Keamanan digital adalah praktik dan langkah-langkah yang diambil untuk melindungi informasi, data, serta identitas pribadi dari risiko dan ancaman di dunia digital.</p>
+            
+            <div class="hidden bg-white rounded-lg shadow-md p-8 w-4/5">
+                <h1 class="text-2xl font-bold mb-4">Fungsi Keamanan Digital</h1>
+                <p class="mb-8">Pencegahan: Mencegah ancaman cyber sebelum mereka dapat merusak atau mencuri informasi.</p>
+                <p class="mb-8">Deteksi: Mendeteksi ancaman dan serangan cyber yang terjadi secara cepat agar langkah pencegahan dapat diambil.</p>
+                <p class="mb-8">Respons: Memberikan tanggapan yang tepat saat terjadi pelanggaran keamanan, termasuk mengisolasi dan memitigasi ancaman.</p>
+                <p class="mb-8">Pemulihan: Mengembalikan sistem dan data ke keadaan normal setelah serangan cyber terjadi.</p>
+            </div>
+            
+            <div class="hidden bg-white rounded-lg shadow-md p-8 w-4/5">
+                <h1 class="text-2xl font-bold mb-4">Manfaat Keamanan Digital</h1>
+                <p class="mb-8">Perlindungan Identitas: Mencegah pencurian identitas dan informasi pribadi oleh peretas.</p>
+                <p class="mb-8">Pencegahan Pencurian Data: Mencegah data sensitif seperti nomor kartu kredit atau informasi bank dari dicuri.</p>
+                <p class="mb-8">Privasi: Menjaga informasi pribadi agar tidak disalahgunakan atau dilihat oleh pihak yang tidak berwenang.</p>
+                <p class="mb-8">Pertahanan Bisnis: Mengamankan data perusahaan dan menghindari kerugian finansial serta reputasi akibat pelanggaran keamanan.</p>
+            </div>
+            
+            <div class="hidden bg-white rounded-lg shadow-md p-8 w-4/5">
+                <h1 class="text-2xl font-bold mb-4">Tujuan Keamanan Digital</h1>
+                <p class="mb-8">Kerahasiaan: Melindungi informasi pribadi dan rahasia bisnis dari akses yang tidak sah.</p>
+                <p class="mb-8">Integritas: Menjaga integritas data dengan mencegah perubahan yang tidak sah.</p>
+                <p class="mb-8">Ketersediaan: Memastikan informasi dan data selalu tersedia ketika dibutuhkan.</p>
+                <p class="mb-8">Keaslian: Memastikan bahwa informasi berasal dari sumber yang sah dan dapat dipercaya.</p>
+            </div>
+            
+            <div class="hidden bg-white rounded-lg shadow-md p-8 w-4/5">
+                <h1 class="text-2xl font-bold mb-4">Contoh Penerapan</h1>
+                <p class="mb-8">Lingkungan Belajar: Siswa dapat memahami pentingnya menggunakan kata sandi yang kuat untuk akun-akun online mereka, serta berbagi informasi pribadi secara bijaksana. Mereka juga perlu menilai kredibilitas sumber informasi online yang mereka gunakan dalam tugas-tugas sekolah.</p>
+                <p class="mb-8">Lingkungan Sekolah: Guru dan staf sekolah harus mengajarkan siswa tentang bahaya cyberbullying dan pentingnya berbicara dengan orang dewasa jika mereka menghadapi masalah online. Sekolah juga perlu menjaga keamanan data siswa dan orang tua dengan memastikan sistem informasi sekolah dilindungi.</p>
+            </div>
+            
+            <div class="hidden bg-white rounded-lg shadow-md p-8 w-4/5">
+                <h1 class="text-2xl font-bold mb-4">Di Luar Sekolah</h1>
+                <p class="mb-8">Individu harus waspada terhadap email phishing yang mencoba mencuri informasi pribadi. Mereka juga perlu berbelanja online hanya di situs yang terpercaya dan mengamankan perangkat mereka dengan perangkat lunak antivirus yang mutakhir.</p>
+            </div>
+            
+            <div class="hidden bg-white rounded-lg shadow-md p-8 w-4/5">
+                <h1 class="text-2xl font-bold mb-4">Lingkungan Kelas</h1>
+                <p class="mb-8">Dalam lingkungan kelas, keamanan digital memegang peran penting dalam melindungi informasi siswa dan menjaga pengalaman belajar yang positif.</p>
+            </div>
+            
+            <script>
+                const slides = document.querySelectorAll('.bg-white');
+                let currentSlide = 0;
+                
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === index ? 'block' : 'none';
+                    });
+                }
+                
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                }
+                
+                showSlide(currentSlide);
+                setInterval(nextSlide, 5000); // Ganti slide setiap 5 detik
+            </script>
+        </div>
+    </div>
+</body>
+</html>
